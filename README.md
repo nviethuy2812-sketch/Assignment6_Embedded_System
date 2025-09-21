@@ -1,3 +1,4 @@
+#Embedded_System_PTIT_Exercise_6
 Giao Tiếp I2C Master trên STM32F1
 Giới thiệu
 Dự án này là bài tập cơ bản về cách triển khai giao thức I²C (Inter-Integrated Circuit) trên vi điều khiển STM32F103C8T6. Chương trình cấu hình STM32 làm thiết bị Master, thực hiện đọc dữ liệu từ một cảm biến Slave (ví dụ: MPU-6050), và sau đó gửi dữ liệu này lên máy tính qua giao tiếp UART để hiển thị và giám sát.
