@@ -1,30 +1,27 @@
 # Assignment6_Embedded_System
-Giao tiếp I2C (I2C Communication)
+Giao Tiếp I2C Master trên STM32F1
+Dự án này là bài tập cơ bản về cách triển khai giao thức I²C (Inter-Integrated Circuit) trên vi điều khiển STM32F103C8T6. Chương trình cấu hình STM32 làm thiết bị Master, thực hiện đọc dữ liệu từ một cảm biến Slave (ví dụ: MPU-6050), và sau đó gửi dữ liệu này lên máy tính qua giao tiếp UART để hiển thị và giám sát.
 
-Dự án này trình bày cách cấu hình và sử dụng vi điều khiển STM32 làm thiết bị Master trong giao tiếp I2C. Chương trình sẽ thực hiện đọc/ghi dữ liệu với một thiết bị Slave bên ngoài (ví dụ: cảm biến, EEPROM) và hiển thị kết quả lên máy tính để giám sát.
+Đây là một kỹ năng nền tảng trong lập trình nhúng, cho phép vi điều khiển giao tiếp với hàng ngàn loại cảm biến, bộ nhớ và các IC ngoại vi khác chỉ bằng hai dây tín hiệu.
 
-Yêu cầu:
-Cấu hình ngoại vi I2C trên STM32 hoạt động ở chế độ Master.
+Yêu cầu & Tính Năng Chính 🎯
+Cấu hình I2C Master: Khởi tạo và cấu hình ngoại vi I2C1 của STM32 để hoạt động ở chế độ Master.
 
-Cấu hình UART để gửi dữ liệu về máy tính.
+Giao tiếp Slave: Viết các hàm cấp thấp để đọc thành công dữ liệu từ một địa chỉ thanh ghi cụ thể của thiết bị Slave.
 
-Viết các hàm để thực hiện giao tiếp (đọc/ghi một hoặc nhiều byte) với một thiết bị I2C Slave cụ thể.
+Giám sát qua UART: Dữ liệu đọc từ cảm biến được định dạng và gửi lên PC thông qua USART1 (9600-8-N-1) để hiển thị trên terminal.
 
-Trong vòng lặp chính, chương trình sẽ đọc dữ liệu từ Slave một cách định kỳ và hiển thị lên terminal.
+Báo hiệu Trạng thái: Sử dụng một đèn LED để báo hiệu trạng thái hoạt động của chương trình (ví dụ: nhấp nháy mỗi khi đọc dữ liệu thành công).
 
-Phần cứng sử dụng
-Board phát triển STM32F103C8T6.
+Phần Cứng Sử Dụng 🛠️
+Board phát triển STM32F103C8T6 ("Blue Pill").
 
-Một thiết bị I2C Slave, ví dụ:
+Cảm biến I2C MPU-6050 (Gia tốc kế & Con quay hồi chuyển).
 
-Cảm biến gia tốc/gyro MPU-6050.
+Mạch chuyển USB-to-TTL (CP2102 hoặc FT232).
 
-EEPROM AT24C256.
+Mạch nạp ST-Link V2.
 
-Mạch chuyển USB-to-TTL để giao tiếp UART.
+1x LED và điện trở hạn dòng (~220Ω).
 
-Mạch nạp và gỡ lỗi ST-Link V2.
-
-LED (dùng để báo trạng thái hoạt động).
-
-Dây cắm.
+Dây cắm và Breadboard.
