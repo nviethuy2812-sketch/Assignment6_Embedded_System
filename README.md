@@ -7,7 +7,7 @@ Dự án này tập trung vào việc triển khai giao thức I²C (Inter-Integ
 
 Đây là một kỹ năng quan trọng trong lập trình nhúng, cho phép vi điều khiển giao tiếp với hàng nghìn loại cảm biến, bộ nhớ và các thiết bị ngoại vi khác chỉ với hai dây tín hiệu.
 
-### Yêu cầu & Tính Năng Chính 🎯
+### Yêu cầu & Tính Năng Chính 
 - **Cấu hình I2C Master**: Khởi tạo và cấu hình giao tiếp I2C1 của STM32 để hoạt động ở chế độ Master.
   
 - **Giao tiếp với Slave**: Viết các hàm cấp thấp để thực hiện việc đọc dữ liệu từ một địa chỉ thanh ghi cụ thể của thiết bị Slave.
@@ -16,7 +16,7 @@ Dự án này tập trung vào việc triển khai giao thức I²C (Inter-Integ
 
 - **Báo hiệu trạng thái**: Sử dụng một đèn LED để báo hiệu trạng thái của chương trình (ví dụ: LED nhấp nháy mỗi khi dữ liệu được đọc thành công từ cảm biến).
 
-### Phần Cứng Sử Dụng 🛠️
+### Phần Cứng Sử Dụng 🛠
 - **Board STM32F103C8T6** ("Blue Pill").
 - **Cảm biến I2C MPU-6050** (Gia tốc kế & Con quay hồi chuyển).
 - **Mạch chuyển USB-to-TTL** (CP2102 hoặc FT232).
@@ -47,7 +47,3 @@ Dự án này tập trung vào việc triển khai giao thức I²C (Inter-Integ
 
 ### Giấy Phép
 Dự án này được cấp phép theo **MIT License**. Xem file [LICENSE](LICENSE) để biết thêm chi tiết.
-
-### Tác Giả
-- **Tên của bạn**
-- **Ngày**
